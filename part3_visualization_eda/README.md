@@ -44,7 +44,7 @@ The notebook reports the combined profile, affected-column missing percentages, 
 Results depend on the exact CSV snapshot supplied for the course. The notebook prints the actual computed values when run; no fixed sample numbers are hard-coded into the analysis. Charts are generated in notebook output and are not required as separate image files.
 
 
-Output validation
+## Output validation
 
 After running the notebook from start to finish, verify that:
 
@@ -55,3 +55,10 @@ After running the notebook from start to finish, verify that:
 - The notebook completes without execution errors.
 
 The computed results should come from the supplied CSV files and should not be replaced with hard-coded sample values.
+
+## Troubleshooting
+
+- If a CSV file is not found, check that all four CSV files are inside the `data/` folder.
+- If a package is missing, install the dependencies using `pip install -r requirements.txt`.
+- If notebook cells produce unexpected results, select Restart and Run All to execute the analysis in order.
+- If charts do not appear, check that the notebook cells responsible for generating the charts have executed successfully.
