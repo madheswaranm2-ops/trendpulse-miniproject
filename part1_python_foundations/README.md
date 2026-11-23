@@ -43,7 +43,20 @@ part1_python_foundations/
 - Git and GitHub
 - Python Built-in Data Structures
 
-5. Key Tasks Completed
+5. Installation and Requirements
+
+Requirements
+
+- Python 3
+- Pandas
+
+Install Dependencies
+
+pip install pandas
+
+The notebook can be opened and executed using Google Colab or Jupyter Notebook.
+
+6. Key Tasks Completed
 
 1. Loaded CSV datasets using Pandas.
 2. Converted DataFrame records into Python dictionaries.
@@ -58,7 +71,7 @@ part1_python_foundations/
 11. Classified videos using conditional statements.
 12. Refactored repeated logic into reusable functions.
 
-6. Data Cleaning
+7. Data Cleaning
 
 The following cleaning operations were performed:
 
@@ -69,7 +82,7 @@ The following cleaning operations were performed:
 - Publish times were converted into timezone-aware datetime objects.
 - Original records were preserved without removing rows.
 
-7. Python Data Structures
+8. Python Data Structures
 
 The project demonstrates:
 
@@ -79,19 +92,40 @@ The project demonstrates:
 - Sets: Finding unique video IDs, intersections, and differences.
 - Nested Dictionaries: Organizing country-wise and category-wise summaries.
 
-8. Video Classification
+9. Video Classification
 
-Videos were classified into the following categories:
+Videos were classified into five categories using views, like ratio, and engagement-related conditions.
 
-- Viral Hit
-- Steady Performer
-- Divisive
-- Low Engagement
-- Unrated
+Classification Thresholds
 
-Classification was performed using views, like ratios, and engagement-related settings through conditional logic.
+Metric| Threshold
+Viral Views| 1,000,000 or more
+Steady Views| 100,000 or more
+Divisive Views| 50,000 or more
+High Like Ratio| 0.70 or more
+Low Like Ratio| Below 0.50
 
-9. How to Run the Project
+Classification Categories
+
+- Viral Hit: Videos with at least 1 million views and a like ratio of 0.70 or higher.
+- Steady Performer: Videos meeting the steady-view threshold and the applicable like-ratio and comment conditions, or viral-level videos with a moderate like ratio.
+- Divisive: Videos with a low like ratio under the applicable view conditions.
+- Low Engagement: Videos with low views, zero views, invalid negative metrics, or insufficient engagement under the classification rules.
+- Unrated: Videos with ratings disabled or no likes and dislikes.
+
+Classification Results
+
+Category| Count
+Viral Hit| 9,555
+Steady Performer| 27,345
+Divisive| 47
+Low Engagement| 8,739
+Unrated| 544
+Total| 46,230
+
+The classification logic uses nested conditional statements and safely handles zero ratings and invalid values.
+
+10. How to Run the Project
 
 1. Open "TrendPulse_Part1.ipynb" using Google Colab.
 2. Ensure the four CSV files are available in the "data" folder.
@@ -99,7 +133,7 @@ Classification was performed using views, like ratios, and engagement-related se
 4. Run all notebook cells from top to bottom.
 5. Check the outputs and final validation results.
 
-10. Final Validation
+11. Final Validation
 
 The project includes validation checks for:
 
@@ -113,7 +147,7 @@ Expected validation output:
 
 "All final validation checks passed."
 
-11. Dataset Source
+12. Dataset Source
 
 YouTube Trending Video Statistics dataset provided as part of the TrendPulse mini project assignment.
 
